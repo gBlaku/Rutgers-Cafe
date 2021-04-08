@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="400.0" maxWidth="400.0" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MMController">
+   <top>
+      <Label text="Rutgers Cafe" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Monotype Corsiva" size="63.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <GridPane prefHeight="320.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="214.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="102.4" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="161.9999755859375" minHeight="10.0" prefHeight="106.4" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="mmDonutImage" fitHeight="179.0" fitWidth="150.0" onMouseClicked="#openDonutPage" pickOnBounds="true" preserveRatio="true" scaleX="0.95">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../Images/donuts-getty-0619.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="mmCoffeeImage" fitHeight="150.0" fitWidth="217.0" onMouseClicked="#openCoffeePage" pickOnBounds="true" preserveRatio="true" scaleX="0.7" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../../Images/istockphoto-954537590-612x612.jpg" />
+               </image>
+            </ImageView>
+            <Label text="Donuts">
+               <GridPane.margin>
+                  <Insets left="75.0" top="135.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Coffee" textFill="#eeeeee" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="75.0" top="135.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="YourOrderImage" fitHeight="67.0" fitWidth="102.0" onMouseClicked="#openYourOrdersPage" pickOnBounds="true" preserveRatio="true" scaleX="0.9" scaleY="1.25" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="55.0" top="20.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../Images/shopping%20cart.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="StoreOrders" fitHeight="72.0" fitWidth="88.0" onMouseClicked="#openStoreOrdersPage" pickOnBounds="true" preserveRatio="true" scaleX="1.15" scaleY="1.25" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="55.0" top="15.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../Images/storeOrders.png" />
+               </image>
+            </ImageView>
+            <Label mouseTransparent="true" text="My Order" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="65.0" top="-80.0" />
+               </padding>
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label mouseTransparent="true" text="Store Orders" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="45.0" top="-90.0" />
+               </padding>
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </left>
+</BorderPane>
